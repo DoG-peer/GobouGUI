@@ -1,0 +1,18 @@
+{
+  "name": "gobou_gui",
+  "version": "1.0.0",
+  "description": "GUI for gobou",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c google . | cat",
+    "start": "electron ."
+  },
+  "author": "DoG-peer",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^0.37.2",
+    "eslint": "^2.4.0",
+    "eslint-config-google": "^0.4.0"
+  }
+}

@@ -1,0 +1,19 @@
+tmp
+css
+fonts
+# Added from https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore
+logs
+*.log
+npm-debug.log*
+pids
+*.pid
+*.seed
+lib-cov
+coverage
+.grunt
+.lock-wscript
+build/Release
+node_modules
+jspm_packages
+.npm
+.node_repl_history
