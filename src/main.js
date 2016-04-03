@@ -1,14 +1,12 @@
-'use strict';
-
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const ipcMain = electron.ipcMain;
 
 const spawn = require('child_process').spawn;
-// const task = spawn('gobou', ['--help']);
-const task = spawn('go', ['run', 'test/simple.go']);
-// const task = spawn('ruby', ['-e', '5.times{puts Time.now;STDOUT.flush;sleep 1}']);
+const task = spawn('gobou');
+// const task = spawn('go', ['run', 'test/simple.go']);
+// const task = spawn('ruby', ['-e', '1000.times{puts Time.now;STDOUT.flush;sleep 1}']);
 
 const size = {width: 600, height: 480};
 var mainWindow = null;
@@ -30,7 +28,7 @@ app.on('ready', () => {
 });
 
 ipcMain.on('ready', (e, args) => {
-  let res = "hoge";
+  let res = "ready";
   e.sender.send('message', res);
 });
 
