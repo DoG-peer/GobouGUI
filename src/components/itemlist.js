@@ -8,14 +8,14 @@ export default class ItemList extends Component {
 
   render() {
     return(
-      <ul>
+      <div>
         {
           this.props.items.map((item, index) => {
             return <Item {...item}
                   key={index} />
-          })
+          }).reverse()
         }
-      </ul>
+      </div>
     )
   }
 }
