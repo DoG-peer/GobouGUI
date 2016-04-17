@@ -25,9 +25,11 @@ export default class IpcAction {
     });
     ipcRenderer.on('update', (e, args) => {
       console.log(args);
-      this.dispatch(
-        Actions.addItem(args.toString())
-      );
+      for (let mes of args){
+        this.dispatch(
+          Actions.addItem(mes.toString())
+        );
+      }
     });
   }
 
