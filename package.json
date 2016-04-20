@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint -c google src | cat",
-    "start": "gulp compile; electron ."
+    "start": "gulp compile && electron ."
   },
   "author": "DoG-peer",
   "license": "MIT",
@@ -25,6 +25,7 @@
     "electron-prebuilt": "^0.37.6",
     "eslint": "^2.4.0",
     "eslint-config-google": "^0.4.0",
+    "eslint-plugin-react": "^5.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2"
   },

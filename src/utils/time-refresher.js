@@ -1,4 +1,4 @@
-import Actions   from '../actions';
+import Actions from '../actions';
 import RichState from './rich-state';
 
 export default class TimeRefresher {

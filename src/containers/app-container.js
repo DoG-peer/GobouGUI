@@ -1,17 +1,18 @@
-import App             from '../components/app';
-import Actions         from '../actions';
-import { connect }     from 'react-redux';
-import { ipcRenderer } from 'electron';
+import App from '../components/app';
+import Actions from '../actions';
+import {connect} from 'react-redux';
+import {ipcRenderer} from 'electron';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-  }
-}
+  };
+};
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    subscribeIpc: () => {}
-  }
-}
+    subscribeIpc: () => {
+    }
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

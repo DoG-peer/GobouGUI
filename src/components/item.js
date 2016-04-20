@@ -8,7 +8,7 @@ export default class Item extends Component {
     comment: ""
   };
 
-  _updateComment(){
+  _updateComment() {
     let that = this;
     return (e) => {
       that.setState({comment: e.target.value});

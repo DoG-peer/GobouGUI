@@ -4,8 +4,8 @@ export default class RichState {
   }
 
   addItem(item) {
-    this.items = this.items || []
-    this.items.push(item)
+    this.items = this.items || [];
+    this.items.push(item);
   }
 
 }

@@ -1,6 +1,6 @@
-import { ipcRenderer }  from 'electron';
-import Actions          from '../actions';
-import RichState        from './rich-state';
+import {ipcRenderer} from 'electron';
+import Actions from '../actions';
+import RichState from './rich-state';
 
 export default class IpcAction {
   static subscribe(store) {
@@ -21,11 +21,13 @@ export default class IpcAction {
       this.dispatch(
         Actions.addItem(args.toString())
       );
-      setInterval(()=>{ipcRenderer.send('update')}, 1000*2);
+      setInterval(() => {
+        ipcRenderer.send('update');
+      }, 1000 * 2);
     });
     ipcRenderer.on('update', (e, args) => {
       console.log(args);
-      for (let mes of args){
+      for (let mes of args) {
         this.dispatch(
           Actions.addItem(mes.toString())
         );
@@ -33,7 +35,7 @@ export default class IpcAction {
     });
   }
 
-  static ready(){
+  static ready() {
     ipcRenderer.send('ready');
   }
 }
