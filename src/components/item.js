@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { Card, CardActions, CardHeader, CardTitle, CardText, TextField } from 'material-ui';
+import React, {Component, PropTypes} from 'react';
+import {Card, CardActions, CardHeader, CardTitle, CardText, TextField} from 'material-ui';
 export default class Item extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,

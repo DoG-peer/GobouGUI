@@ -16,8 +16,8 @@ export default class IpcAction {
 
   subscribe() {
     let state = this.state;
+
     ipcRenderer.on('message', (e, args) => {
-      console.log(args);
       this.dispatch(
         Actions.addItem(args.toString())
       );
@@ -25,8 +25,8 @@ export default class IpcAction {
         ipcRenderer.send('update');
       }, 1000 * 2);
     });
+
     ipcRenderer.on('update', (e, args) => {
-      console.log(args);
       for (let mes of args) {
         this.dispatch(
           Actions.addItem(mes.toString())
